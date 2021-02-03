@@ -207,10 +207,37 @@ main{
 .footer{
     margin-top: 10%;
     width: 100vw;
-    height: 25vh;
+    height: 35vh;
     background-color: black;
+    position: relative;
 }
 
+.footer-topic{
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-container{
+    width: max-content;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 20px;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-container-content{
+    width: 30px;
+    height: 30px;
+}
 
 @media all and (min-width: 768px) and (max-width: 1024px){
     body{
