@@ -1,383 +1,467 @@
-body>header{
-    width: 100%;
+body{
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
     height: 100vh;
-    background: radial-gradient(#DC562E,#161616);
     position: relative;
     font-family: "Segoe UI";
+    background: radial-gradient(#DC562E,#161616);
     color: aliceblue;
 }
 
-body>header>img{
+.header-logo{
+    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 2;
+}
+
+.header-content{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    z-index: 2;
+}
+
+.header-content-name{
+    margin: 0;
+    font-size: 60px;
+}
+
+.header-content-position{
+    font-size: 40px;
+}
+
+.header-image{
     height: 100%;
     position: absolute;
     right: 0;
 }
 
-body>header>section{
-    width: max-content;
-    height: max-content;
-    position: absolute;
-    margin: 0;
-    left: 10%;
-    top: 30%;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    z-index: 2;
-}
 
-body>header>section>h1{
-    font-size: 60px;
-}
 
-body>header>section>h3{
-    font-size: 36px;
-    margin-top: 10px;
-}
 
-body>header>h4{
-    position: absolute;
-    left: 10%;
-    top: 5%;
-    z-index: 2;
-}
 
-body>main{
+
+
+main{
     width: 100%;
     height: max-content;
+    position: relative;
     font-family: "Segoe UI";
     color: black;
-    position: relative;
-    margin-top: 50px;
+    margin: auto;
 }
 
-
-
-
-#myStory{
+.myStory{
     width: 90%;
     height: max-content;
-    margin: auto;
-    display: flex;
-    position: relative;
-    gap: 20px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
 }
+.myStory-description{}
 
-#myStoryDescription{
-    height: max-content;
-}
-
-#myStoryDescription>section{
-    height: max-content;
-    border-left: 3px solid #DC562E;
-    margin-left: 20px;
-}
-
-#myStoryImages{
-    height: 400px;
+.myStory-images{
     display: grid;
     grid-template-columns: repeat(3,150px);
-
+    grid-template-rows: repeat(2,200px);
+    justify-content: right;
 }
 
-#myStoryImages>img{
-    width: 100%;
+.myStory-images-image{
+    width: 150px;
     height: 200px;
 }
 
 
 
-#areasOfInterest{
+.areasOfInterest{
     width: 90%;
-    margin: auto;
     height: max-content;
-
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-#areasOfInterest>h1{
+.areasOfInterest-topic{
     text-align: center;
-    margin-bottom: 100px;
-    margin-top: 120px;
 }
 
-#areasOfInterest>div{
-    width: 80%;
-    margin: auto;
+.areasOfInterest-container{
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
 }
 
-#areasOfInterest>div>section{
+.areasOfInterest-container-content{
     width: 100%;
-    height: 150px;
+    height: 100%;
     text-align: center;
     padding-top: 20px;
 }
 
-#areasOfInterest>div>section:hover{
+.areasOfInterest-container-content:hover{
     color: #dc562e;
     box-shadow: 2px 5px rgba(220, 86, 46, 0.5);
     border: 1px solid #DC562E;
     border-radius: 10px;
 }
 
-#areasOfInterest>div>section>img{
-    width: 75px;
-}
 
 
-#skillsExpertise{
+
+
+.skillsExpertise{
     width: 90%;
-    margin: auto;
     height: max-content;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-#skillsExpertise>h1{
-    margin-top: 120px;
-    margin-bottom: 100px;
+.skillsExpertise-topic{
     text-align: center;
 }
 
-#skillsExpertise>div{
-    width: 80%;
-    margin: auto;
+.skillsExpertise-container{
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 30px;
-
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10%;
 }
 
-#skillsExpertise>div>img{
-    height: 100px;
+.skillsExpertise-container-image{
+    width: 100%;
 }
 
 
 
-#latestProjects{
+.latestProjects{
     width: 90%;
-    margin: auto;
     height: max-content;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-#latestProjects>h1{
+.latestProjects-topic{
     text-align: center;
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-bottom: 10%;
 }
 
-#latestProjects>div{
+.latestProjects-container{
     width: 90%;
-    margin: auto;
-    height: max-content;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 50px;
-
+    grid-gap: 10%;
 }
 
-#latestProjects>div>section{
-    border-radius: 5px;
-    box-shadow: 2px 5px rgba(255,255,255,0.5);
-    border: 1px solid white;
-}
-
-#latestProjects>div>section:hover{
+.latestProjects-container-contend:hover{
     border-radius: 5px;
     box-shadow: 2px 5px rgba(0,0,0,0.5);
     border: 1px solid black;
 }
 
-#latestProjects>div>section>img{
-    width: 90%;
-    height: 300px;
-    position: relative;
-    left: 5%;
-    top: 10px;
-    margin-bottom: 20px;
+.latestProjects-container-contend-image{
+    width: 100%;
+    height: 200px;
 }
 
-#latestProjects>div>section>h4{
+.latestProjects-container-contend-topic{
+    margin-top: 10%;
     text-align: center;
 }
 
-#latestProjects>div>section>p{
-    padding-left: 10px;
+.latestProjects-container-contend-description{
+    margin-top: 10%;
+    text-align: center;
 }
 
 
 
-#footer{
-    margin-top: 80px;
-    width: 100%;
-    height: 100px;
-    background: #161616;
+.footer{
+    margin-top: 10%;
+    width: 100vw;
+    height: 25vh;
+    background-color: black;
 }
 
 
-@media all and (min-width: 320px) and (max-width: 425px){
-    body>header>section {
-        width: 100%;
-        height: max-content;
-        position: absolute;
-        margin: 0;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        text-shadow: 4px 3px 3px rgba(0,0,0,0.8);
-        text-align: center;
+@media all and (min-width: 768px) and (max-width: 1024px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .header-content{
+        top: 46%;
+        left: 23%;
         z-index: 2;
     }
 
-    body>header>section>h1 {
-        font-size: 35px;
+    .myStory{
+        grid-template-columns: 100%;
+        grid-template-row: repeat(2,50%);
     }
 
-    body>header>section>h3 {
+    .myStory-images{
+        justify-content: center;
+    }
+
+    .myStory-images-image{
+        width: 150px;
+        height: 200px;
+    }
+
+
+}
+
+@media all and (min-width: 425px) and (max-width: 767px){
+    .header-content-name{
+        font-size: 40px;
+    }
+
+    .header-content-position{
         font-size: 20px;
-        margin-top: -10px;
     }
 
+    .header-content{
+        position: absolute;
+        left: 17%;
+        top: 65%;
+    }
 
-    body>main {
-        width: 100%;
+    .myStory{
+        all: initial;
+        width: 90%;
         height: max-content;
-        font-family: "Segoe UI";
-        color: black;
-        position: relative;
-        margin-top: 25px;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    #myStory {
-        width: 95%;
-        height: max-content;
-        margin: auto;
-        display: block;
-    }
-    #myStoryDescription {
-        height: max-content;
-        width: 100%;
+    .myStory-description{
+        padding: 10px;
     }
 
-    #myStoryDescription>h1 {
+    .myStory-description-topic{
         text-align: center;
-        font-size: 25px;
+    }
+
+    .myStory-images{
+        all: initial;
+        display: grid;
+        grid-template-columns: repeat(3,130px);
+        grid-template-rows: repeat(2,175px);
+        justify-content: center;
+    }
+
+    .myStory-images-image{
+        width: 130px;
+        height: 175px;
+    }
+
+    .areasOfInterest-container{
+        all: initial;
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+
+    .areasOfInterest-container-content-image{
+        width: 75px;
+    }
+
+    .latestProjects-container{
+        all: initial;
+        width: 90%;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-gap: 20px;
+    }
+
+
+
+
+}
+
+@media all and (min-width: 375px) and (max-width: 424px){
+    body{
+        overflow-x: hidden;
+    }
+    .header-content-name{
+        font-size: 30px;
+    }
+
+    .header-content-position{
+        font-size: 15px;
+    }
+
+    .header-content{
+        position: absolute;
+        left: 17%;
+        top: 65%;
+    }
+
+    .myStory{
+        all: initial;
+        width: 90%;
+        height: max-content;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .myStory-description{
+        padding: 10px;
+    }
+
+    .myStory-description-topic{
+        text-align: center;
+    }
+
+    .myStory-images{
+        all: initial;
+        display: grid;
+        grid-template-columns: repeat(3,115px);
+        grid-template-rows: repeat(2,150px);
         margin-bottom: 20px;
+        justify-content: center;
     }
 
-    #myStoryDescription>section {
+    .myStory-images-image{
+        width: 115px;
+        height: 150px;
+    }
+
+    .areasOfInterest-container{
+        all: initial;
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+
+    .areasOfInterest-container-content-image{
+        width: 75px;
+    }
+
+    .latestProjects-container{
+        all: initial;
+        width: 90%;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-gap: 20px;
+    }
+
+}
+
+@media all and (min-width: 320px) and (max-width: 374px){
+    body{
+        overflow-x: hidden;
+    }
+    .header-content-name{
+        font-size: 30px;
+    }
+
+    .header-content-position{
+        font-size: 15px;
+    }
+
+    .myStory{
+        all: initial;
         width: 90%;
         height: max-content;
-        margin: auto;
-        border: 0;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .myStory-description{
+        padding: 10px;
+    }
+
+    .myStory-description-topic{
         text-align: center;
     }
 
-    #myStoryImages {
-        height: max-content;
+    .myStory-images{
+        all: initial;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        margin-top: 25px;
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(2,135px);
+        margin-bottom: 20px;
+        justify-content: center;
     }
 
-    #myStoryImages>img {
-        width: 100%;
-        height: 120px;
+    .myStory-images-image{
+        width: 100px;
+        height: 135px;
     }
 
-
-    #areasOfInterest {
-        width: 95%;
-        margin: auto;
-        height: max-content;
-    }
-
-    #areasOfInterest>h1 {
-        text-align: center;
-        margin-bottom: 50px;
-        margin-top: 60px;
-        font-size: 25px;
-    }
-
-    #areasOfInterest>div {
-        width: 80%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 40px;
-    }
-
-
-
-
-    #skillsExpertise {
-        width: 95%;
-        margin: auto;
-        height: max-content;
-    }
-
-    #skillsExpertise>h1 {
-        margin-top: 60px;
-        margin-bottom: 50px;
-        text-align: center;
-        font-size: 25px;
-    }
-
-    #skillsExpertise>div {
-        width: 80%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 50px;
-        grid-row-gap: 30px;
-    }
-
-    #skillsExpertise>div>img {
-        height: 70px;
-    }
-
-
-
-    #latestProjects {
-        width: 95%;
-        margin: auto;
-        height: max-content;
-    }
-
-    #latestProjects>h1 {
-        text-align: center;
-        margin-top: 60px;
-        margin-bottom: 50px;
-        font-size: 25px;
-    }
-
-    #latestProjects>div {
+    .areasOfInterest-container{
+        all: initial;
         width: 90%;
-        margin: auto;
-        height: max-content;
-        display: block;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
     }
 
-    #latestProjects>div>section {
-        border-radius: 5px;
-        box-shadow: 2px 5px rgba(255,255,255,0.5);
-        border: 1px solid white;
-        text-align: center;
-        margin-bottom: 40px;
+    .areasOfInterest-container-content-image{
+        width: 50px;
     }
 
-    #latestProjects>div>section>img {
+    .latestProjects-container{
+        all: initial;
         width: 90%;
-        height: 300px;
-        position: relative;
-        left: 0;
-        top: 0;
-        margin-bottom: 0;
-    }
-
-    #latestProjects>div>section>h4 {
-        text-align: center;
-        margin-top: 0;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-gap: 20px;
     }
 }
